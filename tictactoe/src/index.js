@@ -111,12 +111,16 @@ class Game extends React.Component {
 
         const moves = history.map((historyItem, moveIndex) => {
             const description = moveIndex ?
-                'Go to move #' + moveIndex + " : " + historyItem.moveCoordinates.row + " - " + historyItem.moveCoordinates.column :
+                `Go to move #${moveIndex} : ${historyItem.moveCoordinates.row} - ${historyItem.moveCoordinates.column}` :
                 'Go to game start';
+
+            const classNameMaybeBoldText = (moveIndex === this.state.stepIndex) ? 'bold-text' : '';
 
             return (
                 <li key={moveIndex}>
-                    <button onClick={() => this.jumpTo(moveIndex)}>{description}</button>
+                    <button className={classNameMaybeBoldText} onClick={() => this.jumpTo(moveIndex)}>
+                        {description}
+                    </button>
                 </li>
             );
         });
