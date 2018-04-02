@@ -7,6 +7,10 @@ ol, ul {
     padding-left: 30px;
 }
 
+.bold-text {
+    font-weight: bold;
+}
+
 .board-row:after {
     clear: both;
     content: "";
@@ -15,6 +19,11 @@ ol, ul {
 
 .status {
     margin-bottom: 10px;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
 }
 
 .square {
@@ -40,15 +49,6 @@ ol, ul {
     background: #ddd;
 }
 
-.game {
-    display: flex;
-    flex-direction: row;
-}
-
 .game-info {
     margin-left: 20px;
-}
-
-.bold-text {
-    font-weight: bold;
 }
